@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const InfoBox = ({
     heading,
     backgroundColor = "bg-gray-100",
@@ -12,7 +14,7 @@ const InfoBox = ({
                 {children}
             </p>
             <Link
-                href={buttonInfo.link}
+                href={buttonInfo.link || ""}
                 className={`inline-block ${buttonInfo.backgroundColor} text-white rounded-lg px-4 py-2 hover:bg-gray-700`}
             >
                 {buttonInfo.text}
